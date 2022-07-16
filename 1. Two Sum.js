@@ -7,4 +7,4 @@ function twosum(nums, target) {
   return [-1, -1];
 }
 twosum([1, 2, 3, 4, 5], 9);
-console.log(twosum([1, 2, 3, 4, 5], 20));
+console.log(twosum([1, 2, 3, 4, 5], 9));

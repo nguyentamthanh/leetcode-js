@@ -7,4 +7,4 @@ function palindrome(num) {
   }
   return false;
 }
-palindrome(121);
+console.log(palindrome(121));
