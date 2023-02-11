@@ -1,15 +1,12 @@
 function longestCommonPrefix(strs) {
-  if (strs.length == 0) return "";
-  var len1 = strs.length;
-  var len2 = strs[0].length;
-  var temp = "";
-  var res = "";
-  outer: for (var i = 0; i < len2; i++) {
-    temp = strs[0][i];
-    console.log(
-      "🚀 ~ file: 14. Longest Common Prefix.js ~ line 9 ~ longestCommonPrefix ~ temp",
-      temp
-    );
-  }
+  if (strs.length === 0) return "";
+  let prefix = strs[0];
+  strs.forEach(function (str) {
+    while (str.indexOf(prefix) !== 0) {
+      prefix = prefix.substring(0, prefix.length - 1);
+      if (prefix.length === 0) return "";
+    }
+  });
+  return prefix;
 }
-longestCommonPrefix(["flower", "flow", "flight"]);
+console.log(longestCommonPrefix(["flower", "flow", "flight"]));
